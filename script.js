@@ -72,7 +72,7 @@ const updateExchangeRate = async () => {
   const URL = `${BASE_URL}/rates?c1=${fromCurr.value}&c2=${toCurr.value}&q=${amtVal}`;
 
   try{
-    const URL;
+    console.log(URL);
   let response = await fetch(URL);
   let data= await response.json();
     if (!data.rate) {

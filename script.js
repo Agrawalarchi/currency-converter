@@ -72,7 +72,7 @@ const updateExchangeRate = async () => {
   const URL = `${BASE_URL}c1=${fromCurr.value}&c2=${toCurr.value}&q=${amtVal}`;
 
   try{
-  let response = await fetch(URL, {origin:"include"});
+  let response = await fetch(URL);
   let data= await response.json();
     if (!data.rate) {
       throw new Error("Invalid response from API");

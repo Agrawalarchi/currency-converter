@@ -79,7 +79,6 @@ const updateExchangeRate = async () => {
     }
 
   let finalAmount = dt.data.rate.toFixed(4);
-  console.log(finalAmount);
   msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 }
 

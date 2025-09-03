@@ -72,14 +72,13 @@ const updateExchangeRate = async () => {
   const URL = `${BASE_URL}/rates?c1=${fromCurr.value}&c2=${toCurr.value}&q=${amtVal}`;
 
   try{
-    console.log(URL);
   let response = await fetch(URL);
-  let data= await response.json();
-    if (!data.rate) {
+  let dt= await response.json();
+    if (!dt.success) {
       throw new Error("Invalid response from API");
     }
 
-  let finalAmount = data.rate.toFixed(4);
+  let finalAmount = dt.data.rate.toFixed(4);
   console.log(finalAmount);
   msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 }

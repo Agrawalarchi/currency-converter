@@ -7,7 +7,7 @@ const swapBtn = document.querySelector("#swap-btn");
 const amountInput = document.querySelector(".amount input");
 
 
-const BASE_URL="https://kartz-currency-converter-api.vercel.app/currency/rates?"
+const BASE_URL="https://kartz-currency-converter-api.vercel.app/currency?"
 
 const countryList = {
   AED: "AE", AFN: "AF", XCD: "AG", ALL: "AL", AMD: "AM", AOA: "AO", ARS: "AR", AUD: "AU", AZN: "AZ",
@@ -69,7 +69,7 @@ const updateExchangeRate = async () => {
   }
 
 
-  const URL = `${BASE_URL}c1=${fromCurr.value}&c2=${toCurr.value}&q=${amtVal}`;
+  const URL = `${BASE_URL}/rates?c1=${fromCurr.value}&c2=${toCurr.value}&q=${amtVal}`;
 
   try{
   let response = await fetch(URL);

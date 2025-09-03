@@ -7,7 +7,7 @@ const swapBtn = document.querySelector("#swap-btn");
 const amountInput = document.querySelector(".amount input");
 
 
-const BASE_URL="https://kartz-currency-converter-api.vercel.app/currency?"
+const BASE_URL="https://kartz-currency-converter-api.vercel.app/currency"
 
 const countryList = {
   AED: "AE", AFN: "AF", XCD: "AG", ALL: "AL", AMD: "AM", AOA: "AO", ARS: "AR", AUD: "AU", AZN: "AZ",
